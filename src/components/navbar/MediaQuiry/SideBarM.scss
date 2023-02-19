@@ -1,0 +1,97 @@
+
+.SideBar {
+  position: fixed;
+  background-color: white;
+  height: 100%;
+  z-index: 1000000;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  font-size: 23px;
+  color: rgba(0, 0, 0, 0.493);
+  width: 350px;
+  overflow-y: auto;
+  transition: 0.5s;
+  padding-right: 40px;
+
+  div {
+    margin: 20px 0;
+    cursor: pointer;
+  }
+
+
+  button {
+    outline: none;
+    border: none;
+    background-color: #1dbf73;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 160px;
+    height: 60px;
+    cursor: pointer;
+  }
+
+  .Business {
+    color: #1dbf73;
+    font-weight: 600;
+  }
+
+  .general {
+    color: black;
+    position: relative;
+    font-size: 20px;
+    padding-bottom: 10px;
+    font-weight: 600;
+    width: 100%;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(128, 128, 128, 0.459);
+      bottom: 0px;
+    }
+  }
+
+}
+
+
+@for $i from 1 through 3 {
+  .slide {
+      overflow: hidden;
+      transition: .5s ease-in-out;
+      height: 35px;
+  
+      p {
+        &>svg {
+          transition: .5s ease-in-out;
+          transform: rotate(0deg);
+        }
+      }
+
+      &.show#{$i} {
+        height: 100% !important;
+  
+        &>p {
+          svg {
+            transition: .5s ease-in-out;
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+}
+
+
+.twosideflex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.FirstLayear {
+  div {
+    margin-left: 30px;
+  }
+}

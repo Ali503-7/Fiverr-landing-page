@@ -1,0 +1,145 @@
+@use '../../../public/ScssMixins/BrackPoint' as*;
+body {
+  height: 1000vh;
+  background-color: black;
+}
+$white: rgba(0, 0, 0, 0.712);
+$main-Color: rgb(255, 255, 255);
+
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  
+  
+  &.show {
+    transition: 0.5s;
+    background-color: $main-Color;
+    color: rgb(255, 255, 255) !important;
+  }
+  nav {
+    width: 100%;
+    // z-index: 10000;
+  }
+  
+  .topNav {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    .logo {
+      font-size: 35px;
+
+    
+      .text {
+        color: white;
+        font-weight: 600;
+      }
+
+      .dot {
+        color: green;
+      }
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      font-weight: 600;
+      cursor: pointer;
+      color: white;
+      font-size: 19px;
+
+      button {
+        color: rgb(63, 187, 63);
+        cursor: pointer;
+        background-color: transparent;
+        outline: none;
+        border: 1px solid rgb(96, 179, 96);
+        border-radius: 5px;
+        width: 50px;
+        height: 30px;
+        font-size: 16px;
+      }
+
+      .icon {
+        font-size: 15px;
+        color: white;
+        margin-right: 5px;
+      }
+    }
+
+    .searchBar {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+
+
+      input {
+        width: 260px;
+        height: 100%;
+        font-size: 17px;
+        outline: none;
+        border: 1px solid #0000004d;
+        padding: 8px;
+      }
+
+      .logo {
+        width: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        cursor: pointer;
+
+        svg {
+          color: white;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+
+.show {
+  .links {
+    color: rgba(0, 0, 0, 0.596) !important;
+    .icon {
+      color: rgba(0, 0, 0, 0.596) !important;
+    }
+  }
+  .logo {
+    .text {
+      color: rgb(0, 0, 0) !important;
+    }
+  }
+}
+
+
+@include breakPoint(medium) {
+  header {
+    
+  }
+}
+
+@include breakPoint(small) {
+  header {
+      background-color: green;
+    }
+}
+
+@include breakPoint(mobile) {
+  header {
+      background-color: yellow;
+    }
+}

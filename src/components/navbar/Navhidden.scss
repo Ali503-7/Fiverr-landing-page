@@ -1,0 +1,56 @@
+
+$white: black;
+$shoadow-Color: white;
+.hidden {
+  width: 100%;
+  position: relative;
+  transition: 0s ;
+  // padding: 10px 0px;
+
+  &::before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.123);
+  }
+
+  hr {
+    background-color: black;
+  }
+
+  .links {
+    overflow: hidden;
+    padding: 0px 20px;
+    
+    div {
+      cursor: pointer;
+      margin: 0px 5px;
+      font-size: 17px;
+      color: rgba(0, 0, 0, 0.466);
+    }
+
+    .slick-prev {
+      box-shadow: rgb(255 255 255 / 25%) 0px 54px 55px, $shoadow-Color 20px 0px 20px 10px, rgb(255 255 255 / 12%) 0px 4px 6px, rgb(255 255 255 / 17%) 0px 12px 13px, rgb(255 255 255 / 9%) 0px -3px 5px;
+      transform: translate(0, -45%);
+      z-index: 2;
+
+      &::before {
+        color: black;
+      }
+    }
+
+    .slick-next {
+      transform: translate(0, -45%);
+      box-shadow: rgb(255 255 255 / 25%) 0px 54px 55px, rgb(254 254 254 / 0%) 20px 0px 20px 10px, $shoadow-Color -20px -1px 20px 20px, rgb(255 255 255 / 17%) 0px 12px 13px, rgb(255 255 255 / 9%) 0px -3px 5px;
+      z-index: 2;
+      
+      &::before {
+        color: black;
+      }
+    }
+  }
+}
+
+

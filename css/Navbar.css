@@ -1,0 +1,111 @@
+body {
+  height: 1000vh;
+  background-color: black;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+}
+header.show {
+  transition: 0.5s;
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255) !important;
+}
+header nav {
+  width: 100%;
+}
+header .topNav {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .topNav .logo {
+  font-size: 35px;
+}
+header .topNav .logo .text {
+  color: white;
+  font-weight: 600;
+}
+header .topNav .logo .dot {
+  color: green;
+}
+header .topNav .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  color: white;
+  font-size: 19px;
+}
+header .topNav .links button {
+  color: rgb(63, 187, 63);
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid rgb(96, 179, 96);
+  border-radius: 5px;
+  width: 50px;
+  height: 30px;
+  font-size: 16px;
+}
+header .topNav .links .icon {
+  font-size: 15px;
+  color: white;
+  margin-right: 5px;
+}
+header .topNav .searchBar {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+header .topNav .searchBar input {
+  width: 260px;
+  height: 100%;
+  font-size: 17px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.3019607843);
+  padding: 8px;
+}
+header .topNav .searchBar .logo {
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  cursor: pointer;
+}
+header .topNav .searchBar .logo svg {
+  color: white;
+  font-size: 18px;
+}
+
+.show .links {
+  color: rgba(0, 0, 0, 0.596) !important;
+}
+.show .links .icon {
+  color: rgba(0, 0, 0, 0.596) !important;
+}
+.show .logo .text {
+  color: rgb(0, 0, 0) !important;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  header {
+    background-color: green;
+  }
+}
+@media (max-width: 767px) {
+  header {
+    background-color: yellow;
+  }
+}/*# sourceMappingURL=Navbar.css.map */
