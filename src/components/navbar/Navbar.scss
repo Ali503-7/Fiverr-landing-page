@@ -6,6 +6,9 @@ body {
 $white: rgba(0, 0, 0, 0.712);
 $main-Color: rgb(255, 255, 255);
 
+.opacity {
+  opacity: .5;
+}
 
 header {
   display: flex;
@@ -15,7 +18,7 @@ header {
   width: 100%;
   position: fixed;
   
-  
+
   &.show {
     transition: 0.5s;
     background-color: $main-Color;
@@ -23,7 +26,7 @@ header {
   }
   nav {
     width: 100%;
-    // z-index: 10000;
+    transition: .5s;
   }
   
   .topNav {
@@ -34,20 +37,35 @@ header {
     justify-content: space-between;
     align-items: center;
 
+    .right-side {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: auto;
 
-    .logo {
-      font-size: 35px;
+      .Burger {
+        margin-right: 30px;
+        width: 25px;
+        cursor: pointer;
 
-    
-      .text {
-        color: white;
-        font-weight: 600;
       }
 
-      .dot {
-        color: green;
+      .logo {
+        font-size: 35px;
+  
+      
+        .text {
+          color: white;
+          font-weight: 600;
+        }
+  
+        .dot {
+          color: green;
+        }
       }
     }
+
 
     .links {
       display: flex;
@@ -130,16 +148,35 @@ header {
   header {
     
   }
+  .hidden {
+    display: none;
+  }
 }
 
 @include breakPoint(small) {
   header {
       background-color: green;
     }
+
+  .hidden {
+    display: none;
+  }
 }
 
 @include breakPoint(mobile) {
   header {
       background-color: yellow;
     }
+  .hidden {
+    display: none;
+  }
+}
+
+@include breakPoint(large) {
+  header {
+    background-color: aqua;
+  }
+  .hiddenL {
+    display: none !important;
+  }
 }

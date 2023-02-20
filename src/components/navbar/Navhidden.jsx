@@ -15,7 +15,7 @@ function Navhidden({ show }) {
   };
 
   return (
-      show ? <div className="hidden">
+      show ? <div className="hiddenBar">
           <div className="links">
             <Slider {...settings} >
               <div>Graphics & Design</div>

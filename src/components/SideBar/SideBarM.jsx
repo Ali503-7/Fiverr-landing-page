@@ -3,15 +3,29 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState, useEffect } from 'react';
 import './SideBarM.scss';
 
-function SideBarM() {
+const SideBarM = React.forwardRef(({ SideBar }, ref) => {
   const [browse, setBrowse] = useState(false);
   const [explore, setExplore] = useState(false);
   const [lang, setLang] = useState(false);
   const [mony, setMony] = useState(false);
   const [graphics, setGraphics] = useState(false);
 
+  
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (ref.current && !ref.current.contains(event.target)&&
+        event.target.id !== 'toggleButton') {
+        setBrowse(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ref]);
+
   return (
-    <div className="SideBar">
+    <aside className={SideBar ? "SideBar active" : "SideBar"} ref={ref}>
 
       <div className="button">
         <button>Join Fiverr</button>
@@ -90,37 +104,32 @@ function SideBarM() {
           General
         </div>
         <div>Home</div>
-        <div className="English">
+        <div className={lang ? 'slide show4' : 'slide'}>
           <p className='twosideflex' onClick={() => setLang(pre => !pre)}><span>English <FontAwesomeIcon icon={faGlobe} /></span><FontAwesomeIcon icon={faAngleDown} /></p>
-          {lang ? (
             <div className="FirstLayear">
               <div>English</div>
               <div>Arabic</div>
               <div>italiano</div>
               <div>Português</div>
             </div>
-          ) : null}
         </div>
 
-        <div className="MonyYow">
+        <div className={mony ? 'slide show5' : 'slide'}>
           <p className='twosideflex' onClick={() => setMony(pre => !pre)}>
             <span>
               <FontAwesomeIcon icon={faDollar} /> USD
             </span>
             <FontAwesomeIcon icon={faAngleDown} />
           </p>
-          {mony ? (
             <div className="FirstLayear">
               <div>USD - <FontAwesomeIcon icon={faDollar} /></div>
               <div>EUR - <FontAwesomeIcon icon={faEuro} /></div>
             </div>
-          ) : ''}
-
         </div>
       </div>
 
-    </div>
+    </aside>
   )
-}
+});
 
 export default SideBarM

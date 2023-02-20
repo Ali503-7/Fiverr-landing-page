@@ -13,6 +13,11 @@
   overflow-y: auto;
   transition: 0.5s;
   padding-right: 40px;
+  transform: translateX(-100%);
+
+  &.active {
+    transform: translate(0%);
+  }
 
   div {
     margin: 20px 0;
@@ -57,7 +62,7 @@
 }
 
 
-@for $i from 1 through 3 {
+@for $i from 1 through 5 {
   .slide {
       overflow: hidden;
       transition: .5s ease-in-out;
@@ -71,7 +76,17 @@
       }
 
       &.show#{$i} {
-        height: 100% !important;
+        @if $i == 2 {
+          height: 218px !important;
+        } @else if $i == 3 {
+          height: 490.500px !important;
+        } @else if $i == 4{
+          height: 272.500px !important;
+        }@else if $i == 5 {
+          height: 163.500px !important;
+        }@else {
+          height: 654.500px !important;
+        }
   
         &>p {
           svg {

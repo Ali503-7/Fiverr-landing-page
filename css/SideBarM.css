@@ -12,6 +12,10 @@
   overflow-y: auto;
   transition: 0.5s;
   padding-right: 40px;
+  transform: translateX(-100%);
+}
+.SideBar.active {
+  transform: translate(0%);
 }
 .SideBar div {
   margin: 20px 0;
@@ -59,7 +63,7 @@
   transform: rotate(0deg);
 }
 .slide.show1 {
-  height: 100% !important;
+  height: 654.5px !important;
 }
 .slide.show1 > p svg {
   transition: 0.5s ease-in-out;
@@ -76,7 +80,7 @@
   transform: rotate(0deg);
 }
 .slide.show2 {
-  height: 100% !important;
+  height: 218px !important;
 }
 .slide.show2 > p svg {
   transition: 0.5s ease-in-out;
@@ -93,9 +97,43 @@
   transform: rotate(0deg);
 }
 .slide.show3 {
-  height: 100% !important;
+  height: 490.5px !important;
 }
 .slide.show3 > p svg {
+  transition: 0.5s ease-in-out;
+  transform: rotate(180deg);
+}
+
+.slide {
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  height: 35px;
+}
+.slide p > svg {
+  transition: 0.5s ease-in-out;
+  transform: rotate(0deg);
+}
+.slide.show4 {
+  height: 272.5px !important;
+}
+.slide.show4 > p svg {
+  transition: 0.5s ease-in-out;
+  transform: rotate(180deg);
+}
+
+.slide {
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  height: 35px;
+}
+.slide p > svg {
+  transition: 0.5s ease-in-out;
+  transform: rotate(0deg);
+}
+.slide.show5 {
+  height: 163.5px !important;
+}
+.slide.show5 > p svg {
   transition: 0.5s ease-in-out;
   transform: rotate(180deg);
 }

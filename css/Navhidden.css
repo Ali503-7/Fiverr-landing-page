@@ -1,9 +1,9 @@
-.hidden {
+.hiddenBar {
   width: 100%;
   position: relative;
   transition: 0s;
 }
-.hidden::before {
+.hiddenBar::before {
   content: "";
   width: 100%;
   position: absolute;
@@ -11,32 +11,32 @@
   height: 1px;
   background-color: rgba(0, 0, 0, 0.123);
 }
-.hidden hr {
+.hiddenBar hr {
   background-color: black;
 }
-.hidden .links {
+.hiddenBar .links {
   overflow: hidden;
   padding: 0px 20px;
 }
-.hidden .links div {
+.hiddenBar .links div {
   cursor: pointer;
   margin: 0px 5px;
   font-size: 17px;
   color: rgba(0, 0, 0, 0.466);
 }
-.hidden .links .slick-prev {
+.hiddenBar .links .slick-prev {
   box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, white 20px 0px 20px 10px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(255, 255, 255, 0.09) 0px -3px 5px;
   transform: translate(0, -45%);
   z-index: 2;
 }
-.hidden .links .slick-prev::before {
+.hiddenBar .links .slick-prev::before {
   color: black;
 }
-.hidden .links .slick-next {
+.hiddenBar .links .slick-next {
   transform: translate(0, -45%);
   box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, rgba(254, 254, 254, 0) 20px 0px 20px 10px, white -20px -1px 20px 20px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(255, 255, 255, 0.09) 0px -3px 5px;
   z-index: 2;
 }
-.hidden .links .slick-next::before {
+.hiddenBar .links .slick-next::before {
   color: black;
 }/*# sourceMappingURL=Navhidden.css.map */

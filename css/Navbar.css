@@ -27,14 +27,38 @@ header .topNav {
   justify-content: space-between;
   align-items: center;
 }
-header .topNav .logo {
+header .topNav .right-side {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+}
+header .topNav .right-side .Burger {
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+  position: relative;
+  justify-content: space-between;
+  width: 25px;
+  height: 10px;
+  cursor: pointer;
+}
+header .topNav .right-side .Burger span::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
+header .topNav .right-side .logo {
   font-size: 35px;
 }
-header .topNav .logo .text {
+header .topNav .right-side .logo .text {
   color: white;
   font-weight: 600;
 }
-header .topNav .logo .dot {
+header .topNav .right-side .logo .dot {
   color: green;
 }
 header .topNav .links {
@@ -99,13 +123,32 @@ header .topNav .searchBar .logo svg {
   color: rgb(0, 0, 0) !important;
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hidden {
+    display: none;
+  }
+}
 @media (min-width: 768px) and (max-width: 991px) {
   header {
     background-color: green;
+  }
+  .hidden {
+    display: none;
   }
 }
 @media (max-width: 767px) {
   header {
     background-color: yellow;
+  }
+  .hidden {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  header {
+    background-color: aqua;
+  }
+  .hiddenL {
+    display: none !important;
   }
 }/*# sourceMappingURL=Navbar.css.map */
