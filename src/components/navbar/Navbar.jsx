@@ -36,15 +36,25 @@ function Navbar({ setSideBar, SideBar }) {
                 <span className='text'>Fiverr</span>
                 <span className='dot'>.</span>
               </div>
+
+              <div className='join_mobile'>
+                <button>Join</button>
+              </div>
             </div>
 
             {
-              show ? <div className="searchBar">
+              show ? <div className="searchBar hiddenMo">
                 <input
                   type="text"
                   placeholder='What service are you looking for'
+                  className='large'
                 />
-                <div className="logo">
+                <input
+                  type="text"
+                  placeholder='Find services'
+                  className='small'
+                />
+                <div className="logo hiddenS">
                   <FontAwesomeIcon
                     icon={faMagnifyingGlass}
                   />
@@ -52,29 +62,29 @@ function Navbar({ setSideBar, SideBar }) {
               </div> : ''
             }
             <div className="links">
-              <span>Fiverr Business</span>
-              <span>Explore</span>
-              <span className='hidden'>
+              <span className='hiddenS'>Fiverr Business</span>
+              <span className='hiddenS'>Explore</span>
+              <span className='hiddenM'>
                 <FontAwesomeIcon
                   icon={faGlobe}
                   className='icon'
                 />
                 English
               </span>
-              <span className='hidden'>
+              <span className='hiddenM'>
                 <FontAwesomeIcon
                   icon={faDollar}
                   className='icon'
                 />
                 USD
               </span>
-              <span>Become a Seller</span>
-              <span>Sign in</span>
-              <button>Join</button>
+              <span className='hiddenS'>Become a Seller</span>
+              <span className='hiddenMo'>Sign in</span>
+              <button className='hiddenMo'>Join</button>
             </div>
           </div>
           <div className='botNav'>
-            <Navhidden show={show} />
+            <Navhidden show={show}/>
           </div>
         </div>
       </nav>

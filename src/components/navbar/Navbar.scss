@@ -10,6 +10,7 @@ $main-Color: rgb(255, 255, 255);
   opacity: .5;
 }
 
+
 header {
   display: flex;
   flex-direction: column;
@@ -42,7 +43,6 @@ header {
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      width: auto;
 
       .Burger {
         margin-right: 30px;
@@ -109,6 +109,14 @@ header {
         outline: none;
         border: 1px solid #0000004d;
         padding: 8px;
+
+        &::placeholder{
+          content: "What service are you looking for";
+        }
+      }
+
+      .small {
+        display: none;
       }
 
       .logo {
@@ -143,40 +151,78 @@ header {
   }
 }
 
-
-@include breakPoint(medium) {
-  header {
-    
+@mixin hiddenL {
+  .hiddenL {
+    display: none !important;
   }
-  .hidden {
+}
+
+@mixin hiddenM {
+  .hiddenM{
     display: none;
   }
 }
 
-@include breakPoint(small) {
-  header {
-      background-color: green;
-    }
-
-  .hidden {
-    display: none;
+@mixin hiddenS {
+  .hiddenS {
+    display: none !important;
   }
 }
 
-@include breakPoint(mobile) {
-  header {
-      background-color: yellow;
+@mixin searchBar {
+.searchBar {
+    .large {
+      display: none
     }
-  .hidden {
-    display: none;
+
+    .small {
+      display: block !important;
+      border-radius: 5px;
+      width: 280px;
+    }
+  }
+}
+
+@mixin JoinM {
+  .join_mobile {
+    display: none !important;
   }
 }
 
 @include breakPoint(large) {
+  @include hiddenL();
+  @include JoinM();
   header {
     background-color: aqua;
   }
-  .hiddenL {
+}
+
+@include breakPoint(medium) {
+  @include hiddenM();
+  @include JoinM();
+}
+
+@include breakPoint(small) {
+  @include hiddenM();
+  @include hiddenS();
+  @include searchBar();
+  @include JoinM();
+  header {
+      background-color: green;
+    }
+}
+
+@include breakPoint(mobile) {
+  @include hiddenM();
+  @include hiddenS();
+  @include searchBar();
+  header {
+      background-color: yellow;
+      .right-side {
+        width: 100% !important;
+      }
+    }
+  .hiddenMo {
     display: none !important;
   }
 }
