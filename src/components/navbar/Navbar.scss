@@ -64,6 +64,16 @@ header {
           color: green;
         }
       }
+
+    button {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: larger;
+      color: #000000bd;
+    }
     }
 
 
@@ -109,10 +119,6 @@ header {
         outline: none;
         border: 1px solid #0000004d;
         padding: 8px;
-
-        &::placeholder{
-          content: "What service are you looking for";
-        }
       }
 
       .small {
