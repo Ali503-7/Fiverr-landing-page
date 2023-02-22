@@ -66,12 +66,12 @@ function Section_1() {
           <h1>Find the perfect <span>freelance</span> services for your business</h1>
           <div className="search">
             <div className="input">
-            <FontAwesomeIcon icon={faMagnifyingGlass} />
-            <input type="text" />
+              <FontAwesomeIcon icon={faMagnifyingGlass} />
+              <input type="text" />
             </div>
             <button>Search</button>
           </div>
-          <div className="Pop">
+          <div className="Pop hiddenM">
             <p>Popular:</p>
             <span className='Popslist'>Website Design</span>
             <span className='Popslist'>WordPress</span>

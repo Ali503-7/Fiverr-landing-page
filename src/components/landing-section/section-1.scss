@@ -1,13 +1,20 @@
 @use '../../../public/ScssMixins/BrackPoint' as*;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
 
 .section_1{
+  background-color: #1a1b1d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   .contaner {
-      background-color: #1a1b1d;
-      height: 680px !important;
-      justify-content: flex-start;
-      align-items: center;
-      padding: 60px;
-      display: flex;
+    max-width: 1200px;
+    width: 100%;
+    height: 680px !important;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    display: flex;
+
     .backgroundImgs {
       .hero {
         transition: opacity .9s;
@@ -37,6 +44,63 @@
 
     .landing {
       z-index: 10;
+      color: white;
+      max-width: 550px;
+      h1 {
+        font-size: 48px;
+        line-height: 56px;
+        padding-bottom: 24px;
+        span {
+          font-family: 'Dancing Script', cursive;
+        }
+      }
+      .search {
+        display: flex;
+        justify-content: row;
+        width: 100%;
+        margin-bottom: 20px;
+        .input {
+          width: 100%;
+          position: relative;
+          svg {
+            position: absolute;
+            color: black;
+            top: 50%;
+            transform: translateY(-50%);
+            padding-left: 25px;
+          }
+          input {
+            width: 100%;
+            height: 48px;
+            border: none;
+            outline: none;
+            border-radius: 5px 0px 0px 5px;
+            padding-left: 50px;
+          }
+        }
+        button {
+          width: 20%;
+          border: none;
+          outline: none;
+          color: white;
+          font-weight: 600;
+          letter-spacing: 1.5px;
+          font-size: 16px;
+          background-color: #19a463;
+          border-radius: 0px 5px 5px 0px;
+        }
+      }
+      .Pop {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        span {
+          border: 1px solid white;
+          border-radius: 20px;
+          padding: 0px 10px;
+          cursor: pointer;
+        }
+      }
     }
 
   }
@@ -90,4 +154,36 @@
   .backgroundImgs {
     display: none !important;
   } 
+  .section_1{
+    .contaner {
+      justify-content: center !important;
+    }
+  }
+  .landing {
+    h1 {
+      text-align: center;
+      font-size: 32px !important;
+      line-height: 40px !important;
+    }
+    .search {
+      flex-direction: column !important;
+      input {
+        border-radius: 5px !important;
+        width: 100% !important;
+        margin-bottom: 10px !important;
+      }
+      button {
+        height: 45px;
+        border-radius: 5px !important;
+        width: 100% !important;
+      }
+      svg {
+        transform: translateY(-75%) !important;
+      }
+    }
+  }
+
+  .hiddenM {
+    display: none !important;
+  }
 }
