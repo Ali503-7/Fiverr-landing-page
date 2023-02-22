@@ -1,0 +1,93 @@
+@use '../../../public/ScssMixins/BrackPoint' as*;
+
+.section_1{
+  .contaner {
+      background-color: #1a1b1d;
+      height: 680px !important;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 60px;
+      display: flex;
+    .backgroundImgs {
+      .hero {
+        transition: opacity .9s;
+        background-size: auto 100%;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        height: 680px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+      }
+      .hero00 {
+        background-image: url("../../../public/imgs/DisktopImgs/bg-hero-2-1792-x1.webp");
+        background-color: #b64762;
+      }
+      .hero01 {
+        background-image: url("../../../public/imgs/DisktopImgs/bg-hero-4-1792-x1.png");
+        background-color: #023a15;
+      }
+      .hero02 {
+        background-image: url("../../../public/imgs/DisktopImgs/bg-hero-6-1792-x1.webp");
+        background-color: #1a1b1d;
+      }
+    }
+
+    .landing {
+      z-index: 10;
+    }
+
+  }
+}
+
+@mixin backgroundImgs($none) {
+  .backgroundImgs {
+    .hero {
+      @if($none == "") {
+        background-position: right !important;
+      }
+      height: 680px;
+    }
+
+    .hero00 {
+      @if ($none == 'none') {
+        background-image: none !important;
+        background-color: #1a1b1d !important;
+      }@else {
+        background-image: url("../../../public/imgs/TablitImgs/bg-hero-2-900-x1.webp") !important;
+      }
+    }
+
+    .hero01 {
+      @if ($none =='none') {
+          background-image: none !important;
+          background-color: #1a1b1d !important;
+        }@else {
+          background-image: url("../../../public/imgs/TablitImgs/bg-hero-4-900-x1.webp") !important;
+        };
+      }
+    .hero02 {
+      @if ($none =='none') {
+          background-image: none !important;
+          background-color: #1a1b1d !important;
+        }@else {
+          background-image: url("../../../public/imgs/TablitImgs/bg-hero-6-900-x1.webp") !important;
+    };
+  };
+  }
+}
+
+@include breakPoint(medium) {  
+  @include backgroundImgs("")
+}
+@include breakPoint(small) {  
+  @include backgroundImgs("none")
+}
+@include breakPoint(mobile) {  
+  @include backgroundImgs("none");
+  .backgroundImgs {
+    display: none !important;
+  } 
+}

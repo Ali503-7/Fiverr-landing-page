@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react'
 import Navbar from '../../components/navbar/Navbar'
-import Landing from '../../components/landing-section/section-1'
+import Section_1 from '../../components/landing-section/section-1'
 import SideBar from '../../components/SideBar/SideBarM'
 import './Home.scss'
 function Home() {
@@ -34,7 +34,7 @@ function Home() {
     <div className={sideBar ? 'Home opacty' : 'Home'}>
       <SideBar {...commonProps} ref={sidebarRef} />
       <Navbar {...commonProps} />
-      <Landing />
+      <Section_1 />
     </div>
   )
 }

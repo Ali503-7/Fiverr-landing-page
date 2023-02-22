@@ -1,8 +1,5 @@
 @use '../../../public/ScssMixins/BrackPoint' as*;
-body {
-  height: 1000vh;
-  background-color: black;
-}
+
 $white: rgba(0, 0, 0, 0.712);
 $main-Color: rgb(255, 255, 255);
 
@@ -18,6 +15,7 @@ header {
   align-items: center;
   width: 100%;
   position: fixed;
+  z-index: 1000;
   
 
   &.show {
@@ -198,9 +196,6 @@ header {
 @include breakPoint(large) {
   @include hiddenL();
   @include JoinM();
-  header {
-    background-color: aqua;
-  }
 }
 
 @include breakPoint(medium) {
@@ -213,9 +208,6 @@ header {
   @include hiddenS();
   @include searchBar();
   @include JoinM();
-  header {
-      background-color: green;
-    }
 }
 
 @include breakPoint(mobile) {
@@ -223,7 +215,6 @@ header {
   @include hiddenS();
   @include searchBar();
   header {
-      background-color: yellow;
       .right-side {
         width: 100% !important;
       }
