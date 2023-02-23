@@ -29,7 +29,8 @@ function Navbar({ setSideBar, SideBar }) {
           <div className='topNav'>
             <div className="right-side">
               <div id="toggleButton" className='Burger hiddenL' >
-                <img src="../../../public/imgs/Logos/clipart1587307.png" alt="" onClick={() => setSideBar(true)} id="toggleButton"/>
+                <img src={show ? "../../../public/imgs/Logos/hamburger-menu-icon-svg-15.jpg" : "../../../public/imgs/Logos/clipart1587307.png" } alt="" onClick={() => setSideBar(true)} id="toggleButton"/>
+                
               </div>
               
               <div className="logo">
@@ -38,7 +39,7 @@ function Navbar({ setSideBar, SideBar }) {
               </div>
 
               <div className='join_mobile'>
-                <button>Join</button>
+                <button className={show ? "black" : ''}>Join</button>
               </div>
             </div>
 
