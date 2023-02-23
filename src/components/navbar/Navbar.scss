@@ -16,18 +16,19 @@ header {
   width: 100%;
   position: fixed;
   z-index: 1000;
-  
+
 
   &.show {
     transition: 0.5s;
     background-color: $main-Color;
     color: rgb(255, 255, 255) !important;
   }
+
   nav {
     width: 100%;
     transition: .5s;
   }
-  
+
   .topNav {
     max-width: 1200px;
     margin: 20px auto;
@@ -51,27 +52,27 @@ header {
 
       .logo {
         font-size: 35px;
-  
-      
+
+
         .text {
           color: white;
           font-weight: 600;
         }
-  
+
         .dot {
           color: green;
         }
       }
 
-    button {
-      border: none;
-      outline: none;
-      background-color: transparent;
-      font-weight: 600;
-      cursor: pointer;
-      font-size: larger;
-      color: #fff;
-    }
+      button {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        font-weight: 600;
+        cursor: pointer;
+        font-size: larger;
+        color: #fff;
+      }
     }
 
 
@@ -144,10 +145,12 @@ header {
 .show {
   .links {
     color: rgba(0, 0, 0, 0.596) !important;
+
     .icon {
       color: rgba(0, 0, 0, 0.596) !important;
     }
   }
+
   .logo {
     .text {
       color: rgb(0, 0, 0) !important;
@@ -162,7 +165,7 @@ header {
 }
 
 @mixin hiddenM {
-  .hiddenM{
+  .hiddenM {
     display: none;
   }
 }
@@ -174,7 +177,7 @@ header {
 }
 
 @mixin searchBar {
-.searchBar {
+  .searchBar {
     .large {
       display: none
     }
@@ -214,11 +217,13 @@ header {
   @include hiddenM();
   @include hiddenS();
   @include searchBar();
+
   header {
-      .right-side {
-        width: 100% !important;
-      }
+    .right-side {
+      width: 100% !important;
     }
+  }
+
   .hiddenMo {
     display: none !important;
   }

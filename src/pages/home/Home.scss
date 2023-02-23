@@ -1,0 +1,23 @@
+@use '../../../public/ScssMixins/BrackPoint' as*;
+
+.trastedBy {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  margin: auto;
+  max-width: 1200px;
+  padding: 20px;
+  justify-content: center;
+  span {
+    color: rgba(128, 128, 128, 0.664);
+    font-weight: 600;
+    font-size: 18px;
+  }
+}
+
+@include breakPoint(mobile) {
+  .hiddneMH {
+    display: none !important;
+  }
+}
