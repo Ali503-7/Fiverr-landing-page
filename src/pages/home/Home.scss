@@ -2,10 +2,15 @@
 body {
   background-color: #dddddd28 !important;
 }
+.noScroll  {
+  overflow: hidden !important;
+}
 
 .Home {
   overflow-y: hidden;
 }
+
+
 
 .trastedBy {
   display: flex;
@@ -21,6 +26,17 @@ body {
     font-weight: 600;
     font-size: 18px;
   }
+}
+
+.grayBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.637);
+  z-index: 100000;
+  visibility: visible;
 }
 
 @include breakPoint(mobile) {

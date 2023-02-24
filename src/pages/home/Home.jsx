@@ -1,30 +1,14 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState,  useRef } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Section_1 from "../../components/landing-section/section-1";
 import Section_2 from "../../components/SliderSection_2/section_2";
 import SideBar from "../../components/SideBar/SideBarM";
 import "./Home.scss";
+import Section_3 from "../../components/Section_3/Section_3";
 function Home() {
   const [sideBar, setSideBar] = useState(false);
+  const [BgOpacty, setBgOpacty] = useState(false);
   const sidebarRef = useRef(null);
-
-  useEffect(() => {
-    // Attach a click event listener to the document object
-    const handleClickOutside = (event) => {
-      if (
-        sidebarRef.current &&
-        !sidebarRef.current.contains(event.target) &&
-        event.target.id !== "toggleButton"
-      ) {
-        setSideBar(false);
-      }
-    };
-    document.addEventListener("click", handleClickOutside);
-    // Remove the event listener when the component is unmounted
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, [sidebarRef]);
 
   const commonProps = {
     SideBar: sideBar,
@@ -32,7 +16,8 @@ function Home() {
   };
 
   return (
-    <div className={sideBar ? "Home opacty" : "Home"}>
+    <div className={sideBar ? "Home noScroll" : "Home"}
+      style={BgOpacty ? { overflow: "hidden" } : null}>
       <SideBar {...commonProps} ref={sidebarRef} />
       <Navbar {...commonProps} />
       <Section_1 />
@@ -49,6 +34,10 @@ function Home() {
         />
       </div>
       <Section_2 />
+      <Section_3 setBgOpacty={setBgOpacty} BgOpacty={BgOpacty} />
+      {sideBar ?
+        <div className="grayBg" onClick={() => setSideBar(pre => !pre)}></div> : null
+      }
     </div>
   );
 }

@@ -4,7 +4,7 @@ import { faDollar, faGlobe, faMagnifyingGlass } from '@fortawesome/free-solid-sv
 import './Navbar.scss';
 import Navhidden from './Navhidden';
 
-function Navbar({ setSideBar, SideBar }) {
+function Navbar({ setSideBar }) {
 
   const [show, setShow] = useState(false)
 
@@ -24,7 +24,7 @@ function Navbar({ setSideBar, SideBar }) {
 
   return (
     <header className={show ? "show" : ""} >
-      <nav className={SideBar ? 'opacity' : ''}>
+      <nav>
         <div className='container'>
           <div className='topNav'>
             <div className="right-side">

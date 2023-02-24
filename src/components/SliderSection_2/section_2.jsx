@@ -76,7 +76,7 @@ function section_2() {
         breakpoint: 1100,
         settings: {
           slidesToShow: 4,
-          slidesToScroll:4,
+          slidesToScroll: 4,
           infinite: true,
         },
       },
@@ -84,9 +84,9 @@ function section_2() {
         breakpoint: 900,
         settings: {
           slidesToShow: 3,
-          slidesToScroll:3,
+          slidesToScroll: 3,
           infinite: true,
-        }
+        },
       },
       {
         breakpoint: 650,

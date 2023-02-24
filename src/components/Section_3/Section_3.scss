@@ -1,0 +1,99 @@
+
+@use '../../../public/ScssMixins/BrackPoint' as* ;
+.Seciton_3 {
+  background-color: #f1fdf7;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  .contaner {
+    width: 100%;
+    max-width: 1200px;
+    padding: 80px 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.733);
+    .leftSide{
+      margin-right: 150px;
+      h1 {
+        font-size: 2.4em;
+        line-height: 40px;
+        margin-bottom: 20px;
+      }
+      .best {
+        margin-bottom: 20px;
+        h4 {
+          font-size: 20px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+        p {
+          font-size: 20px;
+          color: rgba(0, 0, 0, 0.575);
+        }
+      }
+    }
+
+    .vedioSide {
+      .img{
+        width: 625px;
+        height: 400px;
+        position: relative;
+
+        &::before {
+            content: url('../../../public/imgs/Section_3/desktop-play-button.c1196d6.png');
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.35);
+
+          }
+        img{
+          width: 100%;
+          height: 100%;
+        }
+
+      }
+    }
+  }
+}
+
+.video {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.603);
+  z-index: 10000000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  video {
+    width: 700px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 1110px) {
+  .Seciton_3{
+    .contaner {
+      flex-direction: column !important;
+
+      .leftSide {
+        margin: 0px !important;
+      }
+      .vedioSide{
+        width: 100%;
+        .img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

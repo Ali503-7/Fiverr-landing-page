@@ -25,7 +25,6 @@
       flex-direction: row;
       user-select: none;
       cursor: pointer;
-      gap: 35px;
       .imgContaner {
         transition: .2s;
         position: relative;
@@ -55,11 +54,13 @@
           opacity: .8;
         }
       }
-
+      .slick-track {
+        margin-left: 3px;
+      }
       .slick-slider {
         width: 100%;
         button {
-          z-index: 10000;
+          z-index: 100;
           width: 30px;
           height: 30px;
           background-color: black;
