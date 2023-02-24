@@ -110,3 +110,9 @@
     margin-left: 30px;
   }
 }
+
+@media (max-width: 450px) {
+  .SideBar{
+    width: 90% !important;
+  }
+}

@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  
 
   .contaner {
     max-width: 1200px;
@@ -36,7 +37,6 @@
           color: white;
           font-size: 18px;
           font-weight: 600;
-
         }
 
         .star::before {
@@ -92,7 +92,7 @@
             color: black;
             top: 50%;
             transform: translateY(-50%);
-            padding-left: 25px;
+            padding-left: 20px;
           }
 
           input {

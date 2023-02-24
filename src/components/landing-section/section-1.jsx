@@ -77,7 +77,7 @@ function Section_1() {
           <div className="search">
             <div className="input">
               <FontAwesomeIcon icon={faMagnifyingGlass} />
-              <input type="text" />
+              <input type="text" placeholder='Try "bulding a WebSite"'/>
             </div>
             <button>Search</button>
           </div>

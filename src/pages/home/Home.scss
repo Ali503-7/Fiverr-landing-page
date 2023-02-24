@@ -1,4 +1,11 @@
 @use '../../../public/ScssMixins/BrackPoint' as*;
+body {
+  background-color: #dddddd28 !important;
+}
+
+.Home {
+  overflow-y: hidden;
+}
 
 .trastedBy {
   display: flex;
