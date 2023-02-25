@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+.section_5 {
+  background-color: #0d084d;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  .contaner {
+    width: 100%;
+    max-width: 1200px;
+    padding: 80px 20px;
+    margin: auto;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .left {
+      padding-right: 5%;
+      .header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 30px;
+        .New_5 {
+          background-color: #584aff;
+          border-radius: 30px;
+          padding: 0px 10px;
+          font-size: 12px;
+          font-weight: 600;
+        }
+        svg {
+          width: 178px;
+          height: 22px;
+          margin-right: 10px;
+        }
+      }
+
+      h2 {
+        font-size: 2.5em;
+        line-height: 50px;
+        margin-bottom: 15px;
+        width: 80%;
+        span {
+          font-family: 'Dancing Script', cursive;
+        }
+      }
+
+      h4 {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+      }
+
+      .check{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        p {
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          align-items: center;
+          font-size: 1.1em;
+          font-weight: 600;
+          svg {
+            align-self: flex-start;
+            margin-top: 5px;
+            color: gray;
+            font-size: x-large;
+          }
+        }
+        margin-bottom: 50px;
+      }
+      .foot {
+        button {
+          border: none;
+          outline: none;
+          background-color: #1dbf73;
+          color: white;
+          font-weight: 600;
+          padding: 5px 40px;
+          border-radius: 5px;
+          font-size: 19px;
+          cursor: pointer;
+          transition: .3s;
+          &:hover {
+            background-color: #0d9e5a;
+          }
+        }
+      }
+    }
+    .right {
+      align-self: flex-start;
+      justify-self: flex-end;
+      .img {
+        width: 600px;
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .contaner {
+    flex-direction: column !important;
+
+    .left {
+      margin-bottom: 30px;
+    }
+
+    .right {
+      .img {
+        width: 100% !important;
+        align-self: center !important;
+      }
+    }
+  }
+}

@@ -106,7 +106,7 @@ function section_2() {
     ],
   };
   return (
-    <div className="Section_2">
+    <section className="Section_2">
       <div className="contaner">
         <div className="header">
           <h1>Popular professional services</h1>
@@ -115,7 +115,7 @@ function section_2() {
           <Slider {...settings}>{HandelImgs()}</Slider>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -41,7 +41,7 @@ function Section_1() {
   }, []);
 
   return (
-    <div className="section_1">
+    <section className="section_1">
       <div className="contaner">
         <div className="backgroundImgs">
           <div
@@ -90,7 +90,7 @@ function Section_1() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
