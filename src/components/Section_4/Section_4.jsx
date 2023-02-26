@@ -35,7 +35,7 @@ function Section_4() {
     for (let i = 0; i < imgs.length; i++) {
       imgElements
         .push(
-          <div className="feild">
+          <div className="feild" key={p[i]}>
             <img src={imgs[i]} />
             <p>{p[i]}</p>
           </div>

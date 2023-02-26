@@ -7,15 +7,30 @@ import "./Home.scss";
 import Section_3 from "../../components/Section_3/Section_3";
 import Section_4 from "../../components/Section_4/Section_4";
 import Section_5 from "../../components/Section_5/Seciton_5"
+import Section_6 from "../../components/Section_6/Section_6";
 function Home() {
   const [sideBar, setSideBar] = useState(false);
   const [BgOpacty, setBgOpacty] = useState(false);
+  const [S3SV, setS3SV] = useState(false)
   const sidebarRef = useRef(null);
 
   const commonProps = {
     SideBar: sideBar,
     setSideBar: setSideBar,
   };
+
+  function HandelGBG() {
+    if (sideBar) 
+    setSideBar((pre) => !pre);
+  }
+
+  if (sideBar || BgOpacty ||S3SV) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
+
+
 
   return (
     <div
@@ -41,8 +56,10 @@ function Home() {
       <Section_3 setBgOpacty={setBgOpacty} BgOpacty={BgOpacty} />
       <Section_4 />
       <Section_5 />
+      <Section_6 setS3SV={setS3SV} S3SV={S3SV} />
       {sideBar ? (
-        <div className="grayBg" onClick={() => setSideBar((pre) => !pre)}></div>
+        <div className="grayBg"  onClick={() => HandelGBG()}>
+        </div>
       ) : null}
     </div>
   );

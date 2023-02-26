@@ -1,5 +1,30 @@
 
 @use '../../../public/ScssMixins/BrackPoint' as* ;
+
+.vedioSide {
+  cursor: pointer;
+
+  .img {
+
+    position: relative;
+
+    &::before {
+      content: url('../../../public/imgs/Section_3/desktop-play-button.c1196d6.png');
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.35);
+
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+}
+
 .Seciton_3 {
   background-color: #f1fdf7;
   display: flex;
@@ -37,27 +62,10 @@
         }
       }
     }
-
     .vedioSide {
-      cursor: pointer;
-      .img{
+      .img {
         width: 625px;
         height: 400px;
-        position: relative;
-
-        &::before {
-            content: url('../../../public/imgs/Section_3/desktop-play-button.c1196d6.png');
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(0.35);
-
-          }
-        img{
-          width: 100%;
-          height: 100%;
-        }
-
       }
     }
   }

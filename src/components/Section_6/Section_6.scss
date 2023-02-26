@@ -1,0 +1,133 @@
+.Section_6 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  .contaner {
+    width: 100%;
+    max-width: 1200px;
+    padding: 80px 20px;
+    margin: auto;
+    // position: relative;
+
+    .Storys {
+
+
+      .StoryVideo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        
+        .vedioSide {
+          margin-right: 60px;
+          .img {
+            width: 415px;
+          }
+        }
+
+        .right {
+          display: flex;
+          flex-direction: column;
+
+          .Names {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
+            h5 {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              span:nth-child(1){
+                font-size: 2em;
+                color: rgba(0, 0, 0, 0.582);
+                margin-right: 40px;
+                position: relative;
+
+                &::after {
+                  content: '';
+                  width: 1px;
+                  height: 70%;
+                  position: absolute;
+                  background-color: rgba(0, 0, 0, 0.493);
+                  right: -25px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                }
+              }
+              img {
+                width: 100px;
+              }
+            }
+          }
+        }
+        .Qoulte {
+          font-size: 2em;
+          color: #003912;
+          font-family: "Dancing Script",cursive;
+        }
+      }
+    }
+  }
+
+  .slick-track {
+    margin-left: 3px;
+  }
+
+  .slick-slider {
+    width: 100%;
+
+    button {
+      z-index: 100;
+      width: 30px;
+      height: 30px;
+      background-color: black;
+      border-radius: 50%;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      box-shadow: rgb(0 0 0 / 21%) 0px 0px 20px 5px;
+    }
+
+    .slick-prev {
+      left: -13px;
+    }
+
+    .slick-next {
+      right: -20px;
+    }
+
+    .slick-prev::before,
+    .slick-next::before {
+      opacity: 1 !important;
+      font-size: 45px;
+      color: white;
+      border-radius: 50%;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .StoryVideo {
+    flex-direction: column !important;
+    .vedioSide {
+      width: 100% !important;
+      margin-right: 6px !important;
+      .img{
+        width: 100% !important;
+      }
+    }
+
+    .Names {
+      h5 {
+        flex-direction: column !important;
+        align-items: start !important;
+        span:nth-child(1) {
+          position: unset !important;
+        }
+      }
+    }
+  }
+
+}

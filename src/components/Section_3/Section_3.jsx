@@ -23,9 +23,8 @@ function Section_3({ setBgOpacty, BgOpacty }) {
 
     for (let i = 0; i < h4.length; i++) {
       imgElements.push(
-        <div className="best">
+        <div className="best" key={p[i]}>
           <h4>
-            {" "}
             <FontAwesomeIcon icon={faCircleCheck} /> {h4[i]}
           </h4>
           <p>{p[i]}</p>
