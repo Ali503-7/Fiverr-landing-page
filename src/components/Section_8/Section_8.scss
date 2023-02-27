@@ -13,7 +13,7 @@
 
     .Person {
       width: 90% !important;
-      margin:  0 15px;
+      margin: 0 15px;
       height: 320px !important;
       padding-bottom: 5px !important;
       border-radius: 5px;
@@ -47,9 +47,22 @@
           padding: 0px !important;
           padding-right: 15px !important;
           width: 55px;
+          margin-bottom: 0px !important;
 
           img {
             border-radius: 50%;
+          }
+        }
+
+        .right {
+          h5 {
+            color: gray;
+            font-size: 15px;
+          }
+
+          h4 {
+            font-size: 16px;
+            color: rgba(0, 0, 0, 0.76);
           }
         }
       }
@@ -90,11 +103,9 @@
 
 @media (max-width: 600px) {
   .Section_8 {
-    .Person{
+    .Person {
       margin: 0px 18px !important;
     }
-    .left {
-      margin: 0px !important;
-    }
+
   }
 }
