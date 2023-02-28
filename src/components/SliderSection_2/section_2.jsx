@@ -64,7 +64,7 @@ function section_2() {
     return imgElements;
   }
 
-  var settings = {
+  const settings = {
     dots: false,
     infinite: true,
     speed: 500,
