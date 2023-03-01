@@ -1,4 +1,4 @@
-@use '../../../public/ScssMixins/BrackPoint' as* ;
+@use '../../../public/ScssMixins/BrackPoint' as*;
 
 .Section_2 {
   background-color: white;
@@ -6,6 +6,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+
   .contaner {
     width: 100%;
     max-width: 1200px;
@@ -14,7 +15,8 @@
 
     .header {
       margin-bottom: 20px;
-      h1{
+
+      h1 {
         color: rgba(0, 0, 0, 0.76);
         font-size: 2.5em;
       }
@@ -25,25 +27,30 @@
       flex-direction: row;
       user-select: none;
       cursor: pointer;
+
       .imgContaner {
         transition: .2s;
         position: relative;
+
         .header {
           position: absolute;
           color: white;
           z-index: 1;
           margin: 10px 20px;
           font-weight: 600;
+
           h4 {
             font-size: 2em;
           }
         }
+
         .img {
           border-radius: 5px;
           overflow: hidden;
           width: 211px;
           height: 345px;
-          img{
+
+          img {
             -webkit-user-drag: none;
             transform: scaleX(1.1);
             height: 100%
@@ -54,11 +61,14 @@
           opacity: .8;
         }
       }
+
       .slick-track {
         margin-left: 3px;
       }
+
       .slick-slider {
         width: 100%;
+
         button {
           z-index: 100;
           width: 30px;
@@ -70,13 +80,17 @@
           justify-content: center;
           box-shadow: rgb(0 0 0 / 21%) 0px 0px 20px 5px;
         }
+
         .slick-prev {
           left: -13px;
         }
+
         .slick-next {
           right: 3px;
         }
-        .slick-prev::before, .slick-next::before {
+
+        .slick-prev::before,
+        .slick-next::before {
           opacity: 1 !important;
           font-size: 45px;
           color: white;
@@ -88,21 +102,22 @@
 }
 
 
-@media (max-width: 900px) {  
-  .slider{
-    .img{
+@media (max-width: 900px) {
+  .slider {
+    .img {
       width: 95% !important;
-      img{
+
+      img {
         width: 100%;
         transform: scaleY(1.5) !important;
       }
     }
   }
-} 
+}
 
 @media (max-width: 500px) {
-  .slider{
-    .img{
+  .slider {
+    .img {
       width: 95% !important;
     }
   }
