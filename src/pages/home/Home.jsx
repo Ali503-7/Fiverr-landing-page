@@ -11,6 +11,7 @@ import Section_6 from "../../components/Section_6/Section_6";
 import Section_7 from "../../components/Section_7/Section_7";
 import Section_8 from "../../components/Section_8/Section_8";
 import Section_9 from "../../components/Section_9/Section_9";
+import Section_10 from "../../components/Section_10/Section_10";
 function Home() {
   const [sideBar, setSideBar] = useState(false);
   const [BgOpacty, setBgOpacty] = useState(false);
@@ -63,6 +64,7 @@ function Home() {
       <Section_7 />
       <Section_8 />
       <Section_9 />
+      <Section_10 />
       {sideBar ? (
         <div className="grayBg"  onClick={() => HandelGBG()}>
         </div>

@@ -1,0 +1,105 @@
+.Section_10 {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px 20px;
+
+  .contaner {
+    position: relative;
+    width: 100%;
+    max-width: 1160px;
+    background-color: #45091b;
+    margin: auto;
+    display: felx;
+    align-items: center;
+    padding: 120px 96px;
+    border-radius: 5px;
+
+    .BG {
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .signUp {
+      position: sticky;
+      z-index: 5;
+      max-width: 600px;
+
+      h1 {
+        font-size: 3.5em;
+        color: white;
+        padding-bottom: 30px;
+        line-height: 1em;
+
+        span {
+          font-family: "Dancing Script",
+            cursive;
+        }
+      }
+
+      button {
+        outline: none;
+        border: none;
+        width: 150px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: #1dbf73;
+        color: white;
+        font-weight: 700;
+        font-size: 1.2em;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1150px) {
+  .Section_10 {
+    .contaner {
+      padding: 70px 40px !important;
+
+      .signUp {
+        h1 {
+          font-size: 3em;
+        }
+      }
+
+      .BG {
+        img {
+          right: 0px;
+          left: unset !important;
+          width: unset !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .Section_10 {
+
+    .contaner {
+      padding: 30px 25px !important;
+    }
+    picture {
+      display: none !important;
+    }
+
+    .signUp {
+      h1 {
+        line-height: 1.5em !important;
+        font-size: 2.5em !important;
+      }
+    }
+  }
+
+}

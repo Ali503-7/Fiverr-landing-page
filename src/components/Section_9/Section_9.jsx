@@ -40,7 +40,7 @@ function Section_9() {
   }
 
   return (
-    <div className="Section_9">
+    <section className="Section_9">
       <div className="contaner">
         <div className="header">
           <h1>Fiverr guides</h1>
@@ -60,7 +60,7 @@ function Section_9() {
         </div>
         <div className="boxes">{Handelbox()}</div>
       </div>
-    </div>
+    </section>
   );
 }
 
