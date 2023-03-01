@@ -7,7 +7,11 @@ import {
   faInstagram,
   faPinterest,
 } from "@fortawesome/free-brands-svg-icons"; // <-- import styles to be used
-import { faDollar, faGlobe, faUniversalAccess } from "@fortawesome/free-solid-svg-icons";
+import {
+  faDollar,
+  faGlobe,
+  faUniversalAccess,
+} from "@fortawesome/free-solid-svg-icons";
 import "./Footer.scss";
 function Footer() {
   const footData = {
@@ -135,11 +139,21 @@ function Footer() {
           </div>
           <div className="right">
             <div className="social">
-              <FontAwesomeIcon icon={faTwitter} />
-              <FontAwesomeIcon icon={faFacebook} />
-              <FontAwesomeIcon icon={faLinkedin} />
-              <FontAwesomeIcon icon={faPinterest} />
-              <FontAwesomeIcon icon={faInstagram} />
+              <div className="icon">
+                <FontAwesomeIcon icon={faTwitter} />
+              </div>
+              <div className="icon">
+                <FontAwesomeIcon icon={faFacebook} />
+              </div>
+              <div className="icon">
+                <FontAwesomeIcon icon={faLinkedin} />
+              </div>
+              <div className="icon">
+                <FontAwesomeIcon icon={faPinterest} />
+              </div>
+              <div className="icon">
+                <FontAwesomeIcon icon={faInstagram} />
+              </div>
             </div>
             <div className="languge">
               <FontAwesomeIcon icon={faGlobe} />
