@@ -86,6 +86,8 @@ header {
       color: white;
       font-size: 19px;
 
+
+
       button {
         color: rgb(63, 187, 63);
         cursor: pointer;
@@ -109,10 +111,11 @@ header {
       display: flex;
       flex-direction: row;
       position: relative;
+      width: 300px;
 
 
       input {
-        width: 260px;
+        width: 100%;
         height: 100%;
         font-size: 17px;
         outline: none;
@@ -148,6 +151,10 @@ header {
 
     .icon {
       color: rgba(0, 0, 0, 0.596) !important;
+    }
+
+    .FB {
+      color: rgb(20, 20, 150);
     }
   }
 

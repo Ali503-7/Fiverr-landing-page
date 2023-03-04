@@ -18,7 +18,8 @@ footer {
   .contaner {
     width: 100%;
     max-width: 1200px;
-    padding: 60px 20px;
+    padding: 60px 20px 0px 20px;
+    overflow: hidden;
     margin: auto;
   }
 
@@ -28,7 +29,7 @@ footer {
     justify-content: space-between;
 
     .catigory {
-      margin: 20px 0px;
+      margin: 20px 10px;
 
       .head {
         color: rgba(0, 0, 0, 0.801);
@@ -68,7 +69,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 20px;
+    margin: 30px 0px;
 
     .right,
     .left {
@@ -139,6 +140,63 @@ footer {
       .accsaplty {
         font-size: larger;
         cursor: pointer;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 900px) {
+  .top-side {
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 600px) {
+  footer {
+    .top-side {
+      .head{
+        h3 {
+          svg {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    transition: .9s;
+    .contaner {
+      padding-top: 20px;
+    }
+
+    .top-side {
+      flex-wrap: unset !important;
+      flex-direction: column !important;
+      margin-bottom: 20px;
+
+      .catigory {
+        transition: .9s;
+        line-height: 1.3em;
+        height: 1.3em;
+        overflow: hidden;
+        margin: 10px 10px !important;
+
+        .head {
+          h3 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+          }
+        }
+      }
+
+      .open {
+        height: 100% !important;
       }
     }
   }

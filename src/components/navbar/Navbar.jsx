@@ -63,7 +63,7 @@ function Navbar({ setSideBar }) {
               </div> : ''
             }
             <div className="links">
-              <span className='hiddenS'>Fiverr Business</span>
+              <span className='hiddenS FB'>Fiverr Business</span>
               <span className='hiddenS'>Explore</span>
               <span className='hiddenM'>
                 <FontAwesomeIcon

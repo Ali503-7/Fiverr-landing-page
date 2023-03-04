@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTwitter,
@@ -8,12 +8,20 @@ import {
   faPinterest,
 } from "@fortawesome/free-brands-svg-icons"; // <-- import styles to be used
 import {
+  faAngleDown,
   faDollar,
   faGlobe,
   faUniversalAccess,
 } from "@fortawesome/free-solid-svg-icons";
 import "./Footer.scss";
 function Footer() {
+  const [Categories, setCategories] = useState(false);
+
+  const toogleit = (e) => {
+    console.log(e.target.id)
+    // setCategories(pre => !pre)
+  }
+
   const footData = {
     Categories: [
       "Categories",
@@ -87,11 +95,20 @@ function Footer() {
 
   function handelFdata(dataObj) {
     const dataArray = Object.values(dataObj);
+    let defid = ""
+    // if ()
     return dataArray.map((data) => {
       return (
-        <div className="catigory" key={data[0]}>
+        <div
+          className={Categories ? "catigory open" : "catigory"}
+          key={data[0]}
+          id={data[0]}
+          onClick={(e) => toogleit(e)}
+        >
           <div className="head">
-            <h3>{data[0]}</h3>
+            <h3 id={data[0]}>
+              {data[0]} <FontAwesomeIcon icon={faAngleDown} />
+            </h3>
           </div>
           <div className="detals">
             {data[1].map((item) => {
@@ -112,7 +129,6 @@ function Footer() {
     });
   }
 
-  console.log(handelFdata(footData));
 
   return (
     <footer>
