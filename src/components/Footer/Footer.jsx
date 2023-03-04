@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTwitter,
@@ -15,12 +15,61 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import "./Footer.scss";
 function Footer() {
-  const [Categories, setCategories] = useState(false);
+  const [categories, setCategories] = useState(false);
+  const [about, setAbout] = useState(false);
+  const [support, setSupport] = useState(false);
+  const [community, setCommunity] = useState(false);
+  const [MFV, setMFV] = useState(false);
 
   const toogleit = (e) => {
-    console.log(e.target.id)
-    // setCategories(pre => !pre)
-  }
+    const grow = () => {
+      e.target.parentNode.parentNode.style.height = getComputedStyle(
+        e.target.parentNode.parentNode.children[1]
+      ).height;
+    };
+
+    const chrenk = () => {
+      e.target.parentNode.parentNode.style.height = getComputedStyle(
+        e.target.parentNode.parentNode.children[0]
+      ).height;
+    };
+    if (e.target.id == "Categories") {
+      setCategories((pre) => !pre);
+      if (categories) {
+        grow();
+      } else {
+        chrenk();
+      }
+    } else if (e.target.id == "About") {
+      setAbout((pre) => !pre);
+      if (about) {
+        grow();
+      } else {
+        chrenk();
+      }
+    } else if (e.target.id == "Support") {
+      setSupport((pre) => !pre);
+      if (support) {
+        grow();
+      } else {
+        chrenk();
+      }
+    } else if (e.target.id == "Community") {
+      setCommunity((pre) => !pre);
+      if (community) {
+        grow();
+      } else {
+        chrenk();
+      }
+    } else if (e.target.id == "More From Fiverr") {
+      setMFV((pre) => !pre);
+      if (MFV) {
+        grow();
+      } else {
+        chrenk();
+      }
+    }
+  };
 
   const footData = {
     Categories: [
@@ -95,16 +144,9 @@ function Footer() {
 
   function handelFdata(dataObj) {
     const dataArray = Object.values(dataObj);
-    let defid = ""
-    // if ()
     return dataArray.map((data) => {
       return (
-        <div
-          className={Categories ? "catigory open" : "catigory"}
-          key={data[0]}
-          id={data[0]}
-          onClick={(e) => toogleit(e)}
-        >
+        <div className="catigory" key={data[0]} onClick={(e) => toogleit(e)}>
           <div className="head">
             <h3 id={data[0]}>
               {data[0]} <FontAwesomeIcon icon={faAngleDown} />
@@ -128,7 +170,6 @@ function Footer() {
       );
     });
   }
-
 
   return (
     <footer>
@@ -171,16 +212,18 @@ function Footer() {
                 <FontAwesomeIcon icon={faInstagram} />
               </div>
             </div>
-            <div className="languge">
-              <FontAwesomeIcon icon={faGlobe} />
-              <p>English</p>
-            </div>
-            <div className="curancy">
-              <FontAwesomeIcon icon={faDollar} />
-              <p>USD</p>
-            </div>
-            <div className="accsaplty">
-              <FontAwesomeIcon icon={faUniversalAccess} />
+            <div className="group">
+              <div className="languge">
+                <FontAwesomeIcon icon={faGlobe} />
+                <p>English</p>
+              </div>
+              <div className="curancy">
+                <FontAwesomeIcon icon={faDollar} />
+                <p>USD</p>
+              </div>
+              <div className="accsaplty">
+                <FontAwesomeIcon icon={faUniversalAccess} />
+              </div>
             </div>
           </div>
         </div>
@@ -190,3 +233,5 @@ function Footer() {
 }
 
 export default Footer;
+
+//Source: https://stackoverflow.com/questions/46592833

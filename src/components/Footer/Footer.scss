@@ -34,6 +34,7 @@ footer {
       .head {
         color: rgba(0, 0, 0, 0.801);
         margin-bottom: 15px;
+        pointer-events: none;
       }
 
       .detals {
@@ -104,12 +105,18 @@ footer {
         gap: .5em;
       }
 
+      .group {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+      }
       .social {
         margin-right: 1.5em;
         font-size: larger;
         display: flex;
         flex-direction: row;
         gap: 1em;
+
 
         .icon {
           position: relative;
@@ -145,7 +152,6 @@ footer {
   }
 }
 
-
 @media (max-width: 900px) {
   .top-side {
     flex-wrap: wrap;
@@ -155,7 +161,7 @@ footer {
 @media (min-width: 600px) {
   footer {
     .top-side {
-      .head{
+      .head {
         h3 {
           svg {
             display: none;
@@ -169,6 +175,7 @@ footer {
 @media (max-width: 600px) {
   footer {
     transition: .9s;
+
     .contaner {
       padding-top: 20px;
     }
@@ -177,6 +184,10 @@ footer {
       flex-wrap: unset !important;
       flex-direction: column !important;
       margin-bottom: 20px;
+
+      .head {
+        pointer-events: unset !important;
+      }
 
       .catigory {
         transition: .9s;
@@ -197,6 +208,28 @@ footer {
 
       .open {
         height: 100% !important;
+      }
+    }
+    .bottom-side {
+      .left {
+        flex-direction: column;
+        margin-bottom: 0px;
+        svg {
+          margin: 0px;
+        }
+      }
+      flex-direction: column;
+      .right {
+        gap: 0px;
+        flex-direction: column;
+        .social {
+          margin: 0px;
+        }
+        .group {
+          display: flex;
+          flex-direction: row;
+          gap: 2em;
+        }
       }
     }
   }
