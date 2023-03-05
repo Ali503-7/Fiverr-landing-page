@@ -29,7 +29,7 @@ function Navbar({ setSideBar }) {
           <div className='topNav'>
             <div className="right-side">
               <div id="toggleButton" className='Burger hiddenL' >
-                <img src={show ? "../../../public/imgs/Logos/hamburger-menu-icon-svg-15.jpg" : "../../../public/imgs/Logos/clipart1587307.png" } alt="" onClick={() => setSideBar(true)} id="toggleButton"/>
+                <img src={show ? "imgs/Logos/hamburger-menu-icon-svg-15.jpg" : "imgs/Logos/clipart1587307.png" } alt="" onClick={() => setSideBar(true)} id="toggleButton"/>
                 
               </div>
               
