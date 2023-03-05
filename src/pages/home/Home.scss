@@ -1,8 +1,10 @@
 @use '../../../public/ScssMixins/BrackPoint' as*;
+
 body {
   background-color: #dddddd28 !important;
 }
-.noScroll  {
+
+.noScroll {
   overflow: hidden !important;
 }
 
@@ -21,6 +23,7 @@ body {
   max-width: 1200px;
   padding: 20px;
   justify-content: center;
+
   span {
     color: rgba(128, 128, 128, 0.664);
     font-weight: 600;

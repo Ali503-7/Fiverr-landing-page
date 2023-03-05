@@ -110,6 +110,7 @@ footer {
         flex-direction: row;
         gap: 1em;
       }
+
       .social {
         margin-right: 1.5em;
         font-size: larger;
@@ -210,21 +211,27 @@ footer {
         height: 100% !important;
       }
     }
+
     .bottom-side {
       .left {
         flex-direction: column;
         margin-bottom: 0px;
+
         svg {
           margin: 0px;
         }
       }
+
       flex-direction: column;
+
       .right {
         gap: 0px;
         flex-direction: column;
+
         .social {
           margin: 0px;
         }
+
         .group {
           display: flex;
           flex-direction: row;
