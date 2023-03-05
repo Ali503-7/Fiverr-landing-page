@@ -38,20 +38,20 @@ function Section_7() {
         </div>
         <div className="right">
           <picture className="discktop">
-            <img src="../../../public/imgs/Section_7/Discktop/logo-maker-banner-wide-desktop-1352-2x.webp"/>
+            <img src="imgs/Section_7/Discktop/logo-maker-banner-wide-desktop-1352-2x.webp"/>
           </picture>
           <picture className="mobile">
             <source
               media="(min-width: 600px)"
-              srcset="../../../public/imgs/Section_7/Mobile/logo-maker-banner-tablet-852-2x.webp"
+              srcset="imgs/Section_7/Mobile/logo-maker-banner-tablet-852-2x.webp"
             />
             <source
               media="(min-width: 361px)"
-              srcset="../../../public/imgs/Section_7/Mobile/logo-maker-banner-mobile-552-2x.webp"
+              srcset="imgs/Section_7/Mobile/logo-maker-banner-mobile-552-2x.webp"
             />
             <source
               media="(min-width: 0px)"
-              srcset="../../../public/imgs/Section_7/Mobile/logo-maker-banner-mobile-552-2x.webp"
+              srcset="imgs/Section_7/Mobile/logo-maker-banner-mobile-552-2x.webp"
             />
             <img src="nofount" />
           </picture>

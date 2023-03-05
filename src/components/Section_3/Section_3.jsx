@@ -48,13 +48,13 @@ function Section_3({ setBgOpacty, BgOpacty }) {
         </div>
         <div className="vedioSide">
           <div className="img" onClick={toggleVideo}>
-            <img src="../../../public/imgs/Section_3/selling-proposition-still-1400-x1.webp" />
+            <img src="imgs/Section_3/selling-proposition-still-1400-x1.webp" />
           </div>
         </div>
         {BgOpacty ? (
           <div className="video" onClick={toggleVideo}>
             <video
-              src="../../../public/video/vmvv3czyk2ifedefkau7.mp4"
+              src="video/vmvv3czyk2ifedefkau7.mp4"
               controls
             ></video>
           </div>

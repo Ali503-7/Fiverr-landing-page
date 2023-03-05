@@ -8,10 +8,10 @@ function Section_10() {
           <picture>
             <source
               media="(max-width: 1150px)"
-              srcset="../../../public/imgs/Section_10/Tablet/bg-signup-1160-x1.webp"
+              srcset="imgs/Section_10/Tablet/bg-signup-1160-x1.webp"
             />
             <img
-              src="../../../public/imgs/Section_10/descktop/bg-signup-1400-x1.webp"
+              src="imgs/Section_10/descktop/bg-signup-1400-x1.webp"
               alt=""
             />
           </picture>

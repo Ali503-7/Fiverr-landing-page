@@ -3,17 +3,17 @@ import "./Section_9.scss";
 function Section_9() {
   const data = [
     [
-      "../../../public/imgs/Section_9/guide-start-online-business-552-x2.webp",
+      "imgs/Section_9/guide-start-online-business-552-x2.webp",
       "Start an online business and work from home",
       "A complete guide to starting a small business online",
     ],
     [
-      "../../../public/imgs/Section_9/guide-digital-marketing-552-x2.webp",
+      "imgs/Section_9/guide-digital-marketing-552-x2.webp",
       "Digital marketing made easy",
       "A practical guide to understand what is digital marketing",
     ],
     [
-      "../../../public/imgs/Section_9/guide-create-a-logo-552-x2.webp",
+      "imgs/Section_9/guide-create-a-logo-552-x2.webp",
       "Create a logo for your business",
       "A step-by-step guide to create a memorable business logo",
     ],

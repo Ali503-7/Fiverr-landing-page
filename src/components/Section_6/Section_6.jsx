@@ -6,17 +6,17 @@ function Section_6({ S3SV, setS3SV }) {
   const [videoIndex, setVideoIndex] = useState(0)
 
   const imgs = [
-    "../../../public/imgs/Section_6/testimonial-video-still-naadam.webp",
-    "../../../public/imgs/Section_6/testimonial-video-still-rooted.webp",
-    "../../../public/imgs/Section_6/testimonial-video-still-lavender.webp",
-    "../../../public/imgs/Section_6/testimonial-video-still-haerfest.webp",
+    "imgs/Section_6/testimonial-video-still-naadam.webp",
+    "imgs/Section_6/testimonial-video-still-rooted.webp",
+    "imgs/Section_6/testimonial-video-still-lavender.webp",
+    "imgs/Section_6/testimonial-video-still-haerfest.webp",
   ];
 
   const logos = [
-    "../../../public/imgs/Section_6/Logos/naadam-logo-x2.0a3b198.png",
-    "../../../public/imgs/Section_6/Logos/rooted-logo-x2.321d79d.png",
-    "../../../public/imgs/Section_6/Logos/lavender-logo-x2.89c5e2e.png",
-    "../../../public/imgs/Section_6/Logos/haerfest-logo-x2.03fa5c5.png",
+    "imgs/Section_6/Logos/naadam-logo-x2.0a3b198.png",
+    "imgs/Section_6/Logos/rooted-logo-x2.321d79d.png",
+    "imgs/Section_6/Logos/lavender-logo-x2.89c5e2e.png",
+    "imgs/Section_6/Logos/haerfest-logo-x2.03fa5c5.png",
   ];
 
   const names = [
@@ -34,10 +34,10 @@ function Section_6({ S3SV, setS3SV }) {
   ];
 
   const video = [
-    "../../../public/video/Section_6/plfa6gdjihpdvr10rchl.mp4",
-    "../../../public/video/Section_6/yja2ld5fnolhsixj3xxw.mp4",
-    "../../../public/video/Section_6/rb8jtakrisiz0xtsffwi.mp4",
-    "../../../public/video/Section_6/bsncmkwya3nectkensun.mp4",
+    "video/Section_6/plfa6gdjihpdvr10rchl.mp4",
+    "video/Section_6/yja2ld5fnolhsixj3xxw.mp4",
+    "video/Section_6/rb8jtakrisiz0xtsffwi.mp4",
+    "video/Section_6/bsncmkwya3nectkensun.mp4",
   ];
 
   const settings = {
@@ -99,7 +99,7 @@ function Section_6({ S3SV, setS3SV }) {
 
 
   return (
-    <div className="Section_6">
+    <section className="Section_6">
       <div className="contaner">
         <Slider {...settings}>{HandleStorys()}</Slider>
         {S3SV ? (
@@ -108,7 +108,7 @@ function Section_6({ S3SV, setS3SV }) {
           </div>
         ) : null}
       </div>
-    </div>
+    </section>
   );
 }
 

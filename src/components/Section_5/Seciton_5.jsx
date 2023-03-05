@@ -59,10 +59,9 @@ function Seciton_5() {
         </div>
         <div className="right">
           <picture className="img">
-            <source media="(max-width: 900px)" srcset="../../../public/imgs/Section_5/Mobile/business-mobile-836-x2.webp" />
+            <source media="(max-width: 900px)" srcset="imgs/Section_5/Mobile/business-mobile-836-x2.webp" />
             <img
-              src="../../../public/imgs/Section_5/business-desktop-870-x1.webp"
-              alt=""
+              src="imgs/Section_5/business-desktop-870-x1.webp"
             />
           </picture>
         </div>

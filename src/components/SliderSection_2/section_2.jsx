@@ -4,16 +4,16 @@ import './section_2.scss'
 
 function section_2() {
   const imgs = [
-    '../../../public/imgs/Section_2 Slider/ai-artists-2x.webp',
-    '../../../public/imgs/Section_2 Slider/logo-design-2x.webp',
-    '../../../public/imgs/Section_2 Slider/wordpress-2x.webp',
-    '../../../public/imgs/Section_2 Slider/voiceover-2x.webp',
-    '../../../public/imgs/Section_2 Slider/animated-explainer-2x.webp',
-    '../../../public/imgs/Section_2 Slider/social-2x.webp',
-    '../../../public/imgs/Section_2 Slider/seo-2x.webp',
-    '../../../public/imgs/Section_2 Slider/translation-2x.webp',
-    '../../../public/imgs/Section_2 Slider/data-entry-2x.webp',
-    '../../../public/imgs/Section_2 Slider/book-covers-2x.webp',
+    'imgs/Section_2 Slider/ai-artists-2x.webp',
+    'imgs/Section_2 Slider/logo-design-2x.webp',
+    'imgs/Section_2 Slider/wordpress-2x.webp',
+    'imgs/Section_2 Slider/voiceover-2x.webp',
+    'imgs/Section_2 Slider/animated-explainer-2x.webp',
+    'imgs/Section_2 Slider/social-2x.webp',
+    'imgs/Section_2 Slider/seo-2x.webp',
+    'imgs/Section_2 Slider/translation-2x.webp',
+    'imgs/Section_2 Slider/data-entry-2x.webp',
+    'imgs/Section_2 Slider/book-covers-2x.webp',
   ]
 
   const imgsP = [
