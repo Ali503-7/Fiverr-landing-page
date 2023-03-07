@@ -1,22 +1,23 @@
-import React, { useState,  useRef } from "react";
+import React, { useState, useRef } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Section_1 from "../../components/landing-section/section-1";
 import Section_2 from "../../components/SliderSection_2/section_2";
 import SideBar from "../../components/SideBar/SideBarM";
-import "./Home.scss";
 import Section_3 from "../../components/Section_3/Section_3";
 import Section_4 from "../../components/Section_4/Section_4";
-import Section_5 from "../../components/Section_5/Seciton_5"
+import Section_5 from "../../components/Section_5/Seciton_5";
 import Section_6 from "../../components/Section_6/Section_6";
 import Section_7 from "../../components/Section_7/Section_7";
 import Section_8 from "../../components/Section_8/Section_8";
 import Section_9 from "../../components/Section_9/Section_9";
 import Section_10 from "../../components/Section_10/Section_10";
 import Footer from "../../components/Footer/Footer";
-function Home() {
+import "./Home.scss";
+
+export default function Home() {
   const [sideBar, setSideBar] = useState(false);
   const [BgOpacty, setBgOpacty] = useState(false);
-  const [S3SV, setS3SV] = useState(false)
+  const [S3SV, setS3SV] = useState(false);
   const sidebarRef = useRef(null);
 
   const commonProps = {
@@ -25,17 +26,14 @@ function Home() {
   };
 
   function HandelGBG() {
-    if (sideBar) 
-    setSideBar((pre) => !pre);
+    if (sideBar) setSideBar((pre) => !pre);
   }
 
-  if (sideBar || BgOpacty ||S3SV) {
+  if (sideBar || BgOpacty || S3SV) {
     document.body.style.overflow = "hidden";
   } else {
     document.body.style.overflow = "";
   }
-
-
 
   return (
     <div
@@ -68,11 +66,8 @@ function Home() {
       <Section_10 />
       <Footer />
       {sideBar ? (
-        <div className="grayBg"  onClick={() => HandelGBG()}>
-        </div>
+        <div className="grayBg" onClick={() => HandelGBG()}></div>
       ) : null}
     </div>
   );
 }
-
-export default Home;
