@@ -45,12 +45,12 @@ export default function Home() {
       <Section_1 />
       <div className="trastedBy">
         <span className="hiddneMH">Trusted by:</span>
-        <img src="../../../public/imgs/Brand/facebook.31d5f92.png" alt="" />
-        <img src="../../../public/imgs/Brand/google.517da09.png" alt="" />
-        <img src="../../../public/imgs/Brand/netflix.e3ad953.png" alt="" />
-        <img src="../../../public/imgs/Brand/pandg.8b7310b.png" alt="" />
+        <img src="imgs/Brand/facebook.31d5f92.png" alt="" />
+        <img src="imgs/Brand/google.517da09.png" alt="" />
+        <img src="imgs/Brand/netflix.e3ad953.png" alt="" />
+        <img src="imgs/Brand/pandg.8b7310b.png" alt="" />
         <img
-          src="../../../public/imgs/Brand/paypal.ec56157.png"
+          src="imgs/Brand/paypal.ec56157.png"
           alt=""
           className="hiddneMH"
         />
