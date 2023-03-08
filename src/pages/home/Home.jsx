@@ -12,7 +12,7 @@ import Section_8 from "../../components/Section_8/Section_8";
 import Section_9 from "../../components/Section_9/Section_9";
 import Section_10 from "../../components/Section_10/Section_10";
 import Footer from "../../components/Footer/Footer";
-import MeBall from "../../components/MeBall/meBall";
+import MeBall from "../../components/MeBall/MeBall";
 import "./Home.scss";
 
 export default function Home() {
