@@ -234,4 +234,3 @@ function Footer() {
 
 export default Footer;
 
-//Source: https://stackoverflow.com/questions/46592833
