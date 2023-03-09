@@ -1,15 +1,103 @@
 .me-ball {
+  transition: .5s;
   cursor: pointer;
   position: fixed;
-  bottom: 50px;
-  left: 50px;
-  width: 50px;
-  height: 50px;
+  bottom: 50%;
+  left: 0;
+  transform: translate(-50%, 0%);
   opacity: .5;
   cursor: pointer;
+  z-index: 10000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 
+  &:hover {
+    opacity: 1;
+    left: 5px;
+    transform: scale(1.2);
+  }
+
+  .cont {
+    transition: 1s;
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.5) rotate(0deg);
+    
+
+    .papper {
+      max-height: 40px;
+      width: 0px;
+      height: 60px;
+      margin-left: 0px;
+      color: black;
+      padding: 0px;
+      border-radius: 5px;
+      z-index: 2;
+      margin-left: 15px;
+      background-color: #efdca0;
+      padding: 0px 0px;
+      font-family: 'Caveat', cursive;
+      position: relative;
+
+      p {
+        line-height: 1.4em;
+        overflow: hidden;
+      }
+
+      a {
+        transition: 1s;
+        color: rgb(153, 39, 39);
+        text-decoration: none;
+
+        &:hover {
+          color: red;
+        }
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        height: 110%;
+        width: 5px;
+        left: 0;
+        top: 100%;
+        transform: translate(0%, -50%);
+        background-color: #ff6200;
+        border-top: solid 2px gold;
+        border-bottom: solid 2px gold;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        height: 110%;
+        width: 5px;
+        right: 0;
+        top: 100%;
+        transform: translate(0%, -50%);
+        background-color: #ff6200;
+        border-top: solid 2px gold;
+        border-bottom: solid 2px gold;
+      }
+    }
+  }
 
   img {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
+    z-index: 2;
   }
+}
+
+.me-ball:hover .cont {
+  left: 110%;
+  top: 85%;
+  transform: translate(-50%, -50%) scale(1) rotate(720deg);
+  transform-origin: center center;
+  height: 120px;
 }
