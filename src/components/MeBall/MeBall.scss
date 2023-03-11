@@ -25,27 +25,31 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%) scale(0.5) rotate(0deg);
-    
+    transform: translate(-50%, -50%);
+
 
     .papper {
-      max-height: 40px;
+      transition: 1s;
+      max-height: 20px;
       width: 0px;
-      height: 60px;
-      margin-left: 0px;
       color: black;
-      padding: 0px;
-      border-radius: 5px;
       z-index: 2;
-      margin-left: 15px;
       background-color: #efdca0;
       padding: 0px 0px;
       font-family: 'Caveat', cursive;
       position: relative;
+      font-size: 10px;
+
+      .textcon {
+        overflow: hidden;
+        height: 40px;
+        width: 100%;
+      }
 
       p {
-        line-height: 1.4em;
+        width: 130px;
         overflow: hidden;
+        line-height: 1.4em;
       }
 
       a {
@@ -62,26 +66,26 @@
         content: '';
         position: absolute;
         height: 110%;
-        width: 5px;
+        width: 3px;
         left: 0;
-        top: 100%;
+        top: 50%;
         transform: translate(0%, -50%);
         background-color: #ff6200;
-        border-top: solid 2px gold;
-        border-bottom: solid 2px gold;
+        border-top: solid 1px gold;
+        border-bottom: solid 1px gold;
       }
 
       &::after {
         content: '';
         position: absolute;
         height: 110%;
-        width: 5px;
+        width: 3px;
         right: 0;
-        top: 100%;
+        top: 50%;
         transform: translate(0%, -50%);
         background-color: #ff6200;
-        border-top: solid 2px gold;
-        border-bottom: solid 2px gold;
+        border-top: solid 1px gold;
+        border-bottom: solid 1px gold;
       }
     }
   }
@@ -94,10 +98,8 @@
   }
 }
 
-.me-ball:hover .cont {
-  left: 110%;
-  top: 85%;
-  transform: translate(-50%, -50%) scale(1) rotate(720deg);
-  transform-origin: center center;
-  height: 120px;
+.push {
+  transform: rotate(360deg * 3);
+  margin-left: 70px;
+  max-height: 40px !important;
 }
