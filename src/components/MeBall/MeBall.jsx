@@ -49,7 +49,7 @@ function MeBall() {
           <div className="textcon">
             <p>
               Coded by{" "}
-              <a href="google.com" target="_blank">
+              <a href="https://github.com/Ali503-7" target="_blank">
                 Ali Mohamed
               </a>
             </p>
