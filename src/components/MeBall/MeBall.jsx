@@ -21,7 +21,7 @@ function MeBall() {
   }
 
   function close() {
-    papperAction(100, false);
+    papperAction(10, false);
     setTimeout(() => {
       toggleOver(false);
     }, 1000);
