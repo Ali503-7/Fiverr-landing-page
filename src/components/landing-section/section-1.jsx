@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./section-1.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import '../../../public/imgs/DisktopImgs/bg-hero-2-1792-x1.webp'
+import '../../../public/imgs/DisktopImgs/bg-hero-4-1792-x1.png'
+import '../../../public/imgs/DisktopImgs/bg-hero-6-1792-x1.webp'
 
 function Section_1() {
   const [imageIndex, setImageIndex] = useState({
