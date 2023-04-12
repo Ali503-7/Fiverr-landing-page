@@ -14,7 +14,14 @@ import {
   faUniversalAccess,
 } from "@fortawesome/free-solid-svg-icons";
 import "./Footer.scss";
-function Footer() {
+function Footer({
+  langu,
+  setLangu,
+  curancy,
+  setCurancy,
+  curancyLogo,
+  setCurancyLogo,
+}) {
   const [categories, setCategories] = useState(false);
   const [about, setAbout] = useState(false);
   const [support, setSupport] = useState(false);
@@ -215,11 +222,11 @@ function Footer() {
             <div className="group">
               <div className="languge">
                 <FontAwesomeIcon icon={faGlobe} />
-                <p>English</p>
+                <p>{langu}</p>
               </div>
               <div className="curancy">
-                <FontAwesomeIcon icon={faDollar} />
-                <p>USD</p>
+                {curancyLogo}
+                <p>{curancy}</p>
               </div>
               <div className="accsaplty">
                 <FontAwesomeIcon icon={faUniversalAccess} />

@@ -7,9 +7,16 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.scss";
 import Navhidden from "./Navhidden";
-function Navbar({ setSideBar }) {
+function Navbar({
+  setSideBar,
+  langu,
+  setLangu,
+  curancy,
+  setCurancy,
+  curancyLogo,
+  setCurancyLogo,
+}) {
   const [show, setShow] = useState(false);
-
 
   const handelShow = () => {
     return window.scrollY > 0 ? setShow(true) : setShow(false);
@@ -75,12 +82,12 @@ function Navbar({ setSideBar }) {
               <span className="hiddenS FB">Fiverr Business</span>
               <span className="hiddenS">Explore</span>
               <span className="hiddenM">
-                <FontAwesomeIcon icon={faGlobe} className="icon" />
-                English
+                <FontAwesomeIcon icon={faGlobe} />
+                {langu}
               </span>
               <span className="hiddenM">
-                <FontAwesomeIcon icon={faDollar} className="icon" />
-                USD
+                {curancyLogo}
+                {curancy}
               </span>
               <span className="hiddenS">Become a Seller</span>
               <span className="hiddenMo">Sign in</span>

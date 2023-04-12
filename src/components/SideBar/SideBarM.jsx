@@ -3,15 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState, useEffect } from 'react';
 import './SideBarM.scss';
 
-const SideBarM = React.forwardRef(({ SideBar }, ref) => {
+const SideBarM = React.forwardRef(({ SideBar, langu, setLangu, curancy, setCurancy, curancyLogo, setCurancyLogo }, ref) => {
   const [browse, setBrowse] = useState(false);
   const [explore, setExplore] = useState(false);
   const [lang, setLang] = useState(false);
   const [mony, setMony] = useState(false);
   const [graphics, setGraphics] = useState(false);
-  const [langu, setLangu] = useState("English")
-  const [curancy, setCurancy] = useState("USD");
-  const [curancyLogo, setCurancyLogo] = useState(<FontAwesomeIcon icon={faDollar} />);
+
 
   
   useEffect(() => {

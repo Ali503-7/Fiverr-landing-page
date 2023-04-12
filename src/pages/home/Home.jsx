@@ -13,6 +13,13 @@ import Section_9 from "../../components/Section_9/Section_9";
 import Section_10 from "../../components/Section_10/Section_10";
 import Footer from "../../components/Footer/Footer";
 import MeBall from "../../components/MeBall/MeBall";
+import {
+  faAngleDown,
+  faDollar,
+  faEuro,
+  faGlobe,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Home.scss";
 
 export default function Home() {
@@ -21,10 +28,21 @@ export default function Home() {
   const [S3SV, setS3SV] = useState(false);
   const sidebarRef = useRef(null);
 
+  const [langu, setLangu] = useState("English");
+  const [curancy, setCurancy] = useState("USD");
+  const [curancyLogo, setCurancyLogo] = useState(<FontAwesomeIcon icon={faDollar} />);
+
   const commonProps = {
     SideBar: sideBar,
     setSideBar: setSideBar,
+    langu: langu, 
+    setLangu: setLangu,
+    curancy: curancy,
+    setCurancy: setCurancy,
+    curancyLogo: curancyLogo,
+    setCurancyLogo: setCurancyLogo,
   };
+
 
   function HandelGBG() {
     if (sideBar) setSideBar((pre) => !pre);
@@ -50,11 +68,7 @@ export default function Home() {
         <img src="imgs/Brand/google.517da09.png" alt="" />
         <img src="imgs/Brand/netflix.e3ad953.png" alt="" />
         <img src="imgs/Brand/pandg.8b7310b.png" alt="" />
-        <img
-          src="imgs/Brand/paypal.ec56157.png"
-          alt=""
-          className="hiddneMH"
-        />
+        <img src="imgs/Brand/paypal.ec56157.png" alt="" className="hiddneMH" />
       </div>
       <Section_2 />
       <Section_3 setBgOpacty={setBgOpacty} BgOpacty={BgOpacty} />
@@ -65,7 +79,7 @@ export default function Home() {
       <Section_8 />
       <Section_9 />
       <Section_10 />
-      <Footer />
+      <Footer {...commonProps} />
       <MeBall />
       {sideBar ? (
         <div className="grayBg" onClick={() => HandelGBG()}></div>

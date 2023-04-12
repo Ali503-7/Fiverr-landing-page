@@ -33,9 +33,11 @@ function MeBall() {
     padding: "5px 10px",
   };
 
-
   return (
-    <div className="me-ball" style={over ? open() : close()}>
+    <div className="me-ball"
+      onMouseEnter={() => open()}
+      onMouseLeave={() => close()}
+    >
       <img src="imgs/MeBall/Yow.png" alt="" />
       <div className="cont">
         <div
