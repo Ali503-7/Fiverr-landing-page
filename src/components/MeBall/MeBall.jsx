@@ -35,11 +35,7 @@ function MeBall() {
 
 
   return (
-    <div
-      className="me-ball"
-      onMouseEnter={() => open()}
-      onMouseLeave={() => close()}
-    >
+    <div className="me-ball" style={over ? open() : close()}>
       <img src="imgs/MeBall/Yow.png" alt="" />
       <div className="cont">
         <div
@@ -49,7 +45,7 @@ function MeBall() {
           <div className="textcon">
             <p>
               Coded by{" "}
-              <a href="https://github.com/Ali503-7" target="_blank">
+              <a href="https://ali503-7.github.io/My-website" target="_blank">
                 Ali Mohamed
               </a>
             </p>
